@@ -50,7 +50,11 @@ Welcome to ``which_bsm`` Documentation
 .. image:: https://which-bsm.readthedocs.io/en/latest/_static/which_bsm-logo.png
     :target: https://which-bsm.readthedocs.io/en/latest/
 
-Documentation for ``which_bsm``.
+``which_bsm`` is a factory for creating boto session managers with environment-aware AWS authentication across local, CI/CD, and cloud runtimes. It automatically selects the appropriate authentication method based on where your code is running - whether that's local development with AWS CLI profiles, CI/CD environments using role assumption, or AWS compute services with built-in IAM roles.
+
+The library simplifies multi-environment AWS deployments by providing a single configuration point that adapts to different runtime contexts. You configure your environment topology once, and the system handles authentication complexity automatically.
+
+Key features include lazy-loaded session management, AWS account ID validation, automatic workload role ARN generation for CI environments, and runtime detection across various AWS services (Lambda, Batch, ECS, Glue, EC2) and CI platforms.
 
 
 .. _install:
