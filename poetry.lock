@@ -641,6 +641,24 @@ files = [
 ]
 
 [[package]]
+name = "enum-mate"
+version = "0.1.1"
+description = "A lightweight Python library that enhances enum handling with explicit validation, retrieval, and type-conversion methods for safer and more intuitive enum usage."
+optional = true
+python-versions = "<4.0,>=3.9"
+groups = ["main"]
+markers = "extra == \"test\""
+files = [
+    {file = "enum_mate-0.1.1-py3-none-any.whl", hash = "sha256:8453abda2cbd0358c187532ebfde10dd3ad8b52378a4e6993bcb80fe3a639f89"},
+    {file = "enum_mate-0.1.1.tar.gz", hash = "sha256:cca0cb89471db8f22dfcd1740481fe6848aecfc2188d5fc0e25fbfa159454713"},
+]
+
+[package.extras]
+dev = ["build (>=1.2.1,<2.0.0)", "rich (>=13.8.1,<14.0.0)", "twine (>=6.0.0,<7.0.0)", "wheel (>=0.45.0,<1.0.0)"]
+doc = ["Sphinx (>=7.4.7,<8.0.0)", "docfly (==3.0.0)", "furo (==2024.8.6)", "ipython (>=8.18.1,<8.19.0)", "nbsphinx (>=0.8.12,<1.0.0)", "pygments (>=2.18.0,<3.0.0)", "rstobj (==1.2.1)", "sphinx-copybutton (>=0.5.2,<1.0.0)", "sphinx-design (>=0.6.1,<1.0.0)", "sphinx-jinja (>=2.0.2,<3.0.0)"]
+test = ["pytest (>=8.2.2,<9.0.0)", "pytest-cov (>=6.0.0,<7.0.0)"]
+
+[[package]]
 name = "exceptiongroup"
 version = "1.2.2"
 description = "Backport of PEP 654 (exception groups)"
@@ -2607,6 +2625,28 @@ files = [
 test = ["pytest (>=6.0.0)", "setuptools (>=65)"]
 
 [[package]]
+name = "which-env"
+version = "0.1.1"
+description = "A Python library for intelligent multi-environment deployment strategy management with automatic runtime-based environment detection."
+optional = true
+python-versions = "<4.0,>=3.9"
+groups = ["main"]
+markers = "extra == \"test\""
+files = [
+    {file = "which_env-0.1.1-py3-none-any.whl", hash = "sha256:9938ed4017aee952dd67031e7fe37aa8f16921201bb603eaa70bdf67d4f04ef4"},
+    {file = "which_env-0.1.1.tar.gz", hash = "sha256:538f0d1de3badc4d4b00cf0545402b4e0cb1d41e72fcc10df24cb62591bdc0d0"},
+]
+
+[package.dependencies]
+enum_mate = ">=0.1.1,<1.0.0"
+which_runtime = ">=0.1.1,<1.0.0"
+
+[package.extras]
+dev = ["build (>=1.2.1,<2.0.0)", "rich (>=13.8.1,<14.0.0)", "twine (>=6.0.0,<7.0.0)", "wheel (>=0.45.0,<1.0.0)"]
+doc = ["Sphinx (>=7.4.7,<8.0.0)", "docfly (==3.0.0)", "furo (==2024.8.6)", "ipython (>=8.18.1,<8.19.0)", "nbsphinx (>=0.8.12,<1.0.0)", "pygments (>=2.18.0,<3.0.0)", "rstobj (==1.2.1)", "sphinx-copybutton (>=0.5.2,<1.0.0)", "sphinx-design (>=0.6.1,<1.0.0)", "sphinx-jinja (>=2.0.2,<3.0.0)"]
+test = ["pytest (>=8.2.2,<9.0.0)", "pytest-cov (>=6.0.0,<7.0.0)"]
+
+[[package]]
 name = "which-runtime"
 version = "0.1.1"
 description = "A Python library to detect and manage different computational runtime environments with ease."
@@ -2648,9 +2688,9 @@ type = ["pytest-mypy"]
 auto = []
 dev = ["build", "rich", "twine", "wheel"]
 doc = ["Sphinx", "docfly", "furo", "ipython", "nbsphinx", "pygments", "rstobj", "sphinx-copybutton", "sphinx-design", "sphinx-jinja"]
-test = ["pytest", "pytest-cov"]
+test = ["pytest", "pytest-cov", "which_env"]
 
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.9,<4.0"
-content-hash = "776d35a83cdee98dd052254c6e605cb2142933b4ed972dfca186fc6bd2204bd6"
+content-hash = "3728e97577d7074bc1631f554f6f219756bdeb5bd7a81a69e307f7965a969902"

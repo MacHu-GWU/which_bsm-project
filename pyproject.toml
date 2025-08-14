@@ -73,6 +73,7 @@ dev = [
 test = [
     "pytest>=8.2.2,<9.0.0", # Testing framework
     "pytest-cov>=6.0.0,<7.0.0", # Coverage reporting
+    "which_env>=0.1.1,<1.0.0", # Multiple Runtime management
 ]
 
 # ------------------------------------------------------------------------------
